@@ -1,6 +1,19 @@
-frontend-nanodegree-arcade-game
-===============================
+UDACITY frontend-nanodegree-arcade-game
+=======================================
 
-Students should use this [rubric](https://review.udacity.com/#!/projects/2696458597/rubric) for self-checking their submission. Make sure the functions you write are **object-oriented** - either class functions (like Player and Enemy) or class prototype functions such as Enemy.prototype.checkCollisions, and that the keyword 'this' is used appropriately within your class and class prototype functions to refer to the object the function is called upon. Also be sure that the **readme.md** file is updated with your instructions on both how to 1. Run and 2. Play your arcade game.
+# Classic Arcade Game Clone
 
-For detailed instructions on how to get started, check out this [guide](https://docs.google.com/document/d/1v01aScPjSWCCWQLIpFqvg3-vXLH2e8_SZQKC8jNO0Dc/pub?embedded=true).
+## The Game
+
+In this game you have a selected Player and Bug Enemies. The goal to reach the water on the other earned, with all GemStones collected and without colliding into any of the enemies. The player can move left, right, up and down using the keyboard arrow keys. The enemies move in varying speeds. Once a the player collides with an enemy, the game is over and the player moves back to the start square. The game is won when the player reaches the water on the other side and three Points are earned.
+
+
+## Technical Information
+
+To run the game on your local machine
+
+1. Download or clone the repository onto your machine.
+2. Extract the .zip file.
+3. Serve the application (if using Google Chrome can do so via the "Web Server for Chrome" extension).
+4. Open the application.
+5. Alternatively you can click on the following [Game Link](https://jsoto3000.github.io) to play.

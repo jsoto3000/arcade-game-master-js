@@ -3,12 +3,10 @@ const players = document.getElementsByName('players');
 const btnStart = document.querySelector('.btn__new__game');
 const btnRestart = document.querySelector('.btn__restart__game');
 const btnRestart2 = document.querySelector('.btn__restart__game2');
-
 // DIVs and Layout-Elements
 const gameStart = document.querySelector('.game__start');
 const canvas = document.querySelector('.canvas__board');
 const gameEnd = document.querySelector('.game__end');
-
 //Scoring
 let playersMessage = document.querySelector('.players__message');
 let message = document.querySelector('.message');
@@ -16,7 +14,6 @@ let lives = document.querySelectorAll('.lives');
 let score = document.querySelectorAll('.score');
 let collisionCount = 0;
 let bonusCount = 0;
-
 //others
 let allEnemies = [];
 let allBonus = [];
@@ -350,4 +347,4 @@ function keyOnGame() {
         };
         player.handleInput(allowedKeys[e.keyCode]);
    });
-}
+}    
