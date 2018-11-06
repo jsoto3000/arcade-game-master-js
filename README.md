@@ -16,4 +16,4 @@ To run the game on your local machine
 2. Extract the .zip file.
 3. Serve the application (if using Google Chrome can do so via the "Web Server for Chrome" extension).
 4. Open the application.
-5. Alternatively you can click on the following [Game Link](https://jsoto3000.github.io) to play.
+5. Alternatively you can click on the following [Game Link](https://jsoto3000.github.io/arcade-game-master-js/) to play.
