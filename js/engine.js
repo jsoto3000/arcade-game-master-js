@@ -9,7 +9,7 @@
  * drawn but that is not the case. What's really happening is the entire "scene"
  * is being drawn over and over, presenting the illusion of animation.
  *
- * This engine makes the canvas' context (ctx) object globally available to make 
+ * This engine makes the canvas' context (ctx) object globally available to make
  * writing app.js a little simpler to work with.
  */
 
@@ -24,9 +24,9 @@ var Engine = (function(global) {
         ctx = canvas.getContext('2d'),
         lastTime;
 
-    canvas.width = 505;
-    canvas.height = 606;
-    doc.body.appendChild(canvas);
+    canvas.width = game.width;
+    canvas.height = game.height;
+    document.querySelector('.canvas__container').appendChild(canvas);
 
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
@@ -79,7 +79,8 @@ var Engine = (function(global) {
      */
     function update(dt) {
         updateEntities(dt);
-        // checkCollisions();
+        checkCollisions();
+        countBonus();
     }
 
     /* This is called by the update function and loops through all of the
@@ -117,7 +118,7 @@ var Engine = (function(global) {
             numRows = 6,
             numCols = 5,
             row, col;
-        
+
         // Before drawing, clear existing canvas
         ctx.clearRect(0,0,canvas.width,canvas.height)
 
@@ -149,12 +150,14 @@ var Engine = (function(global) {
         /* Loop through all of the objects within the allEnemies array and call
          * the render function you have defined.
          */
-        allEnemies.forEach(function(enemy) {
-            enemy.render();
-        });
-
-        player.render();
-    }
+         allEnemies.forEach(function(enemy) {
+             enemy.render();
+         });
+         allBonus.forEach(function(bonus) {
+             bonus.render();
+         });
+         player.render();
+     }
 
     /* This function does nothing but it could have been a good place to
      * handle game reset states - maybe a new game menu or a game over screen
@@ -169,11 +172,21 @@ var Engine = (function(global) {
      * all of these images are properly loaded our game will start.
      */
     Resources.load([
-        'images/stone-block.png',
-        'images/water-block.png',
-        'images/grass-block.png',
-        'images/enemy-bug.png',
-        'images/char-boy.png'
+      'img/stone-block.png',
+      'img/water-block.png',
+      'img/grass-block.png',
+      'img/enemy-bug.png',
+      'img/enemy-bug-b.png',
+      'img/char-boy.png',
+      'img/char-cat-girl.png',
+      'img/char-horn-girl.png',
+      'img/char-pink-girl.png',
+      'img/char-princess-girl.png',
+      'img/star.png',
+      'img/heart.png',
+      'img/1.png',
+      'img/2.png',
+      'img/3.png',
     ]);
     Resources.onReady(init);
 
